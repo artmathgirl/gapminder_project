@@ -41,3 +41,21 @@ gap.in <- read.table("output/combined_gapMinder.tsv", sep = "\t", header=TRUE)
        main="Zimbabwe") 
 
 ```
+
+*China's* GDP seems to take an exponential growth curve.
+
+*Brazil's* GDP takes a steep upturn in the 1970's, and then the growth rate slows, but continues to increase. 
+
+*Zimbabwe's* GDP rises sharply in the 70's, then is quite erratic before plummeting in the 90's.
+
+```{r aggregate-data, echo=FALSE}
+
+head(summarise(group_by(gap.in, continent),
+     mean_pop = mean(pop),
+     min_pop = min(pop),
+     max_pop = max(pop)))
+
+```
+
+The above table shows that Africa's population grew a lot.
+
