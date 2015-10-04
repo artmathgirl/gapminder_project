@@ -59,3 +59,20 @@ head(summarise(group_by(gap.in, continent),
 
 The above table shows that Africa's population grew a lot.
 
+```{r life_expectancy, echo=FALSE}
+
+hist(gap.in$lifeExp,
+     xlab = "Age",
+     main = "Life Expectancy")
+
+hist(gap.in$lifeExp,
+     xlab = "Age",
+     breaks = 26,
+     main = "Life Expectancy")
+
+
+```
+
+
+The narrower breaks for the histogram of life expectancy shows the stronger bimodal distribution with a peak at 44 years of age and a higher peak at 72.
+
